@@ -1,0 +1,13 @@
+<!-- Sidebar -->
+
+<div  ng-cloack>
+	<ul class="list-group">
+		<li class="list-group-item locationsList"
+			ng-repeat="location in locations track by $index"><span class="glyphicon glyphicon-map-marker"></span> {{location.locationName}}
+			<button type="button" class="btn btn-default btn-sm pull-right"
+				ng-click="deleteLocation(location)">
+				<span class="glyphicon glyphicon-remove"></span> Entfernen
+			</button>
+		</li>
+	</ul>
+</div>

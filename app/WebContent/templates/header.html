@@ -1,0 +1,71 @@
+
+<div id="header" class="row" ng-cloak>
+	<h1>
+		<span class="glyphicon glyphicon-briefcase"
+			style="padding-left: 30px;" /> Problem des Handlungsreisenden
+	</h1>
+	<div id="result"></div>
+
+	<div id="headerNavbar" class="navbar  row ">
+		<div class="col-md-3 lightGrey">
+			<form class="navbar-form navbar-left" style="padding-left: 20px;">
+				<div id="searchForm" class="form-group">
+					<span class="glyphicon glyphicon-search"></span> <input
+						id="googleMapsSearch" class="form-control" type="text"
+						placeholder="Ort">
+				</div>
+			</form>
+		</div>
+
+		<div class="col-md-3 lightGrey">
+			<form class="navbar-form navbar-left">
+				<button class="btn btn-default  dropdown-toggle locationButton"
+					type="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false">
+					<span class="glyphicon glyphicon-map-marker"></span> Start<span
+						class="caret"></span>
+				</button>
+				<ul class="dropdown-menu dropdown-menu-left">
+					<li ng-repeat="location in locations track by $index"><a
+						ng-click="setStartLocation(location)">{{location.locationName}}</a></li>
+				</ul>
+				<h4 style="float: left; display: inline; padding-left: 20px;">
+					<span ng-if="startLocation">Start Ort ist:<span
+						class="label label-success locationLabel">{{startLocation.locationName}}</span></span>
+				</h4>
+			</form>
+
+		</div>
+
+		<div class="col-md-3 lightGrey">
+			<form class="navbar-form navbar-left">
+				<button class="btn btn-default  dropdown-toggle locationButton"
+					type="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false">
+					<span class="glyphicon glyphicon-map-marker"></span> Ziel <span
+						class="caret"></span>
+				</button>
+				<ul class="dropdown-menu dropdown-menu-left"">
+					<li ng-repeat="location in locations track by $index"><a
+						ng-click="setDestinationLocation(location)">{{location.locationName}}</a></li>
+				</ul>
+				<h4 style="float: left; display: inline; padding-left: 20px;">
+					<span ng-if="destinationLocation">Ziel Ort ist: <span
+						class="label label-success locationLabel">{{destinationLocation.locationName}}</span></span>
+				</h4>
+			</form>
+
+		</div>
+
+		<div class="col-md-3 lightGrey">
+			<form class="navbar-form navbar-left">
+				<button type="submit" ng-click="calculateRoute()"
+					ng-disabled="locations.length < 2 || !calculatedAllRoutes"
+					class="btn btn-default">
+					<span class="glyphicon glyphicon-globe"></span> Berechne
+					k&uumlrzesten Weg
+				</button>
+			</form>
+		</div>
+	</div>
+</div>

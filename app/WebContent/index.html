@@ -1,0 +1,58 @@
+<html ng-app="myApp">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="URL=#/Handlunsreisender">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<!-- Bootstrap and jquery imports -->
+<link rel="stylesheet" href="data/lib/bootstrap/css/bootstrap.css">
+<script src="data/lib/jquery/jquery.1.12.4.js"></script>
+<script src="data/lib/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Angular js imports -->
+<script src="data/lib/angular/angular.min.js"></script>
+<script src="data/lib/angular/angular-route.min.js"></script>
+<script src="data/lib/angular/angular-animate.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+
+<!--  Google maps imports -->
+<script type="text/javascript" src="data/lib/loadsh.core.js"></script>
+<script type="text/javascript" src="data/lib/angular-simple-logger.js"></script>
+<script type="text/javascript" src="data/lib/angular/angular-google-maps.js"></script>
+
+<!-- Bootbox imports-->
+<script type="text/javascript" src="data/lib/bootbox.min.js"></script>
+
+<!-- Eigene javascript/css imports -->
+<link rel="stylesheet" href="data/css/app.css">
+
+<script type="text/javascript" src="scripts/utils/functions.js"></script>
+<script type="text/javascript" src="scripts/services/locationService.js"></script>
+<script type="text/javascript" src="scripts/services/calculationService.js"></script>
+<script type="text/javascript" src="scripts/services/googleMapService.js"></script>
+
+<script type="text/javascript" src="scripts/routeController.js"></script>
+
+<script type="text/javascript" src="scripts/myApp.js"></script>
+    
+<title>Handlungsreisender</title>
+</head>
+<body>
+	<div ng-controller="mainCtrl" class="container-fluid">
+		<div class="row">
+			<div ng-include src="'templates/header.html'"></div>
+		</div>
+		<div class="row" >
+			<div id="sidebar" class="col-md-3" ng-include="'templates/sidebar.html'"></div>
+			<div class="col-md-9">
+				<div ng-view></div>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

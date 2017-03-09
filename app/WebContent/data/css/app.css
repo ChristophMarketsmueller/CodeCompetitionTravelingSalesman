@@ -1,0 +1,40 @@
+#header {
+	background-color: LightGray
+}
+
+#header .navbar {
+	background: white;
+}
+
+#header .locationButton {
+	float: left;
+}
+
+#header .locationLabel {
+	position: relative;
+	left: 40px;
+}
+
+#sidebar {
+	height: 100%;
+	background: #B0B0B0;
+}
+
+#sidebar #listWayPoints {
+	height: 100%;
+	overflow-y: scroll;
+	
+}
+
+#sidebar .locationsList {
+	float: left;
+	width: 100%;
+}
+
+#map {
+	height: 100%;
+}
+
+.lightGrey {
+	background: #E8E8E8;
+}
