@@ -1,8 +1,8 @@
 Starten der Applikation:
 
 1. Installieren von Docker -> https://docs.docker.com/engine/installation/
-2. Herunterladen des codeCompetition Ordners
-3. Mit Dockershell in den Ordner navigieren
+2. Klonen des GitHub Reposetorie
+3. Mit Dockershell in das geklonte Verzeichniss navigieren
 4. Ausführen des Befehls "docker-compose build"
 5. (Optional) Ausführen des Befehls "docker-compose scale app=4"
 6. Ausführen des Befehls "docker-compose up"
